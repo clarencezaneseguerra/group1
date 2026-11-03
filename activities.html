@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUP 1 | Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Interactive Choice Buttons */
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-btn {
+            background-color: #1c1a36;
+            color: #d0e1fd;
+            border: 1px solid #7ab2ff;
+            border-radius: 6px;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background-color: #2b2854;
+            color: #ffffff;
+        }
+
+        /* Feedback styling */
+        .option-btn.correct {
+            background-color: #2e7d32 !important;
+            color: #ffffff !important;
+            border-color: #4caf50 !important;
+            font-weight: bold;
+        }
+
+        .option-btn.incorrect {
+            background-color: #c62828 !important;
+            color: #ffffff !important;
+            border-color: #ef5350 !important;
+            font-weight: bold;
+        }
+
+        .feedback-msg {
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            min-height: 20px;
+        }
+
+        .feedback-msg.correct-text {
+            color: #4caf50;
+        }
+
+        .feedback-msg.incorrect-text {
+            color: #ef5350;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-TECH</h1>
+
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li class="has-dropdown">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">Lessons<span class="arrow">&#9662;</span></a>
+              <ul class="dropdown">
+                <li><a href="introductiontocomputer.html">Introduction to Computer</a></li>
+                <li><a href="internetofthings.html">Internet of Things (IoT)</a></li>
+                <li><a href="worldwideweb.html">World Wide Web</a></li>
+                <li><a href="onlinenetiquette.html">Online Netiquette</a></li>
+                <li><a href="internetthreats.html">Internet Threats</a></li>
+              </ul>
+            </li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="references.html">Resources</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <h2 class="section-main-title">Interactive Quiz Test!</h2>
+            <p style="text-align: center;">Click on choices A, B, C, or D to test your understanding of Empowerment Technologies.</p>
+        </section>
+
+        <div class="grid-container">
+          <!-- Activity 1 -->
+          <div class="card" style="flex-direction: column;">
+            <div class="card-content">
+              <h2 class="card-title">Activity 1: Computer Systems</h2>
+              <p class="card-description">
+                <strong>Question:</strong> Why are hardware, software, and peopleware considered equally essential to a functional computer system?
+              </p>
+              <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(this, false)">A. Hardware can function completely on its own without user intervention.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">B. A computer requires physical parts, instructions to run them, and a user to direct operations.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">C. Peopleware replaces the need for operating system software.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">D. Software is only needed when connected to the internet.</button>
+              </div>
+              <div class="feedback-msg"></div>
+            </div>
+          </div>
+
+          <!-- Activity 2 -->
+          <div class="card" style="flex-direction: column;">
+            <div class="card-content">
+              <h2 class="card-title">Activity 2: Internet of Things (IoT)</h2>
+              <p class="card-description">
+                <strong>Question:</strong> How does Cloud Computing primarily support the growth and scalability of IoT devices?
+              </p>
+              <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(this, false)">A. It eliminates the need for internet connections.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">B. It physically protects smart devices from hardware theft.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">C. It provides centralized storage and processing power for large volumes of sensor data.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">D. It reduces the electrical power consumption of smart appliances to zero.</button>
+              </div>
+              <div class="feedback-msg"></div>
+            </div>
+          </div>
+
+          <!-- Activity 3 -->
+          <div class="card" style="flex-direction: column;">
+            <div class="card-content">
+              <h2 class="card-title">Activity 3: World Wide Web Evolution</h2>
+              <p class="card-description">
+                <strong>Question:</strong> What key capability defines the "Read-Write-Own" vision associated with Web 3.0?
+              </p>
+              <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(this, false)">A. Users can only view static web pages created by webmasters.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">B. Users can interact on social platforms, but platforms own all personal data.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">C. Users gain decentralized control and digital ownership of their content and assets.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">D. Users must code their own web browser to view content.</button>
+              </div>
+              <div class="feedback-msg"></div>
+            </div>
+          </div>
+
+          <!-- Activity 4 -->
+          <div class="card" style="flex-direction: column;">
+            <div class="card-content">
+              <h2 class="card-title">Activity 4: Netiquette & Courtesy</h2>
+              <p class="card-description">
+                <strong>Question:</strong> Which core rule of online courtesy highlights the principle: "Remember the Human"?
+              </p>
+              <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(this, false)">A. Always use capital letters to show enthusiasm.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">B. Treat online interactions with the same empathy and respect you would give face-to-face.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">C. Never share files over 10MB on public forums.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">D. Report every disagreement directly to system administrators.</button>
+              </div>
+              <div class="feedback-msg"></div>
+            </div>
+          </div>
+
+          <!-- Activity 5 -->
+          <div class="card" style="flex-direction: column;">
+            <div class="card-content">
+              <h2 class="card-title">Activity 5: Malware Analysis</h2>
+              <p class="card-description">
+                <strong>Question:</strong> What is the main structural difference between a computer virus and a computer worm?
+              </p>
+              <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(this, false)">A. A virus can spread over networks, but a worm cannot.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">B. A worm requires a host file to execute, while a virus runs standalone.</button>
+                <button class="option-btn" onclick="checkAnswer(this, true)">C. A worm can self-replicate without human interaction, while a virus attaches to a host file.</button>
+                <button class="option-btn" onclick="checkAnswer(this, false)">D. Viruses only target mobile devices, while worms only target desktops.</button>
+              </div>
+              <div class="feedback-msg"></div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 10px; text-align: center;">
+            <p><strong>Subject:</strong> Empowerment Technologies (E-TECH)</p>
+            <p><strong>This website was created strictly for academic and learning purposes to demonstrate web development skills and share interactive ICT learning modules.</strong></p>
+            <p><strong>Created By:</strong> GROUP 1</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">&copy; 2026 GROUP 1 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkAnswer(button, isCorrect) {
+            const cardContent = button.closest('.card-content');
+            const allButtons = cardContent.querySelectorAll('.option-btn');
+            const feedbackMsg = cardContent.querySelector('.feedback-msg');
+
+            // Stop if the user already clicked an answer on this card
+            if (cardContent.dataset.locked) return;
+            cardContent.dataset.locked = true;
+
+            // Highlight the user's clicked choice
+            button.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+            if (isCorrect) {
+                feedbackMsg.textContent = 'Correct! Great job.';
+                feedbackMsg.className = 'feedback-msg correct-text';
+            } else {
+                // If wrong, find and highlight the right answer in green
+                allButtons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correct');
+                    }
+                });
+                feedbackMsg.textContent = 'Incorrect. The correct answer is highlighted.';
+                feedbackMsg.className = 'feedback-msg incorrect-text';
+            }
+        }
+    </script>
+</body>
+</html>
